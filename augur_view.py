@@ -236,7 +236,7 @@ def repo_groups_view():
         return renderRepos("table", query, buffer, page, False, "groups")
     else:
         groups = requestJson("repo-groups")
-        return render_template('index.html', body="groups-table", title="Groups", groups=groups, query_key=query, api_url=getSetting('serving'), root=getSetting('approot'))
+        return render_template('index.html', body="groups-table", title="Groups", groups=groups, query_key=query, api_url=getSetting('serving'))
 
 @app.route('/repos/views/repo/<id>')
 def repo_repo_view(id):
