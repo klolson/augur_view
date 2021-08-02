@@ -238,6 +238,10 @@ def repo_groups_view():
         groups = requestJson("repo-groups")
         return render_template('index.html', body="groups-table", title="Groups", groups=groups, query_key=query, api_url=getSetting('serving'))
 
+#TODO add app.route support for an insights view in the frontend
+#app.route('/insights')
+#I think a new view should be created for repo insights
+
 @app.route('/repos/views/repo/<id>')
 def repo_repo_view(id):
     requestReports(id)
